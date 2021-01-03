@@ -20,7 +20,6 @@ export default defineComponent({
     })
 
     function onSearch () {
-      console.log(state.searchInput)
       emit('on-search', state.searchInput)
     }
 

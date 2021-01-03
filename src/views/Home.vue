@@ -22,7 +22,6 @@ export default defineComponent({
     })
 
     function search (inputSearch: string) {
-      console.log(inputSearch)
       state.inputSearch = inputSearch
     }
 
