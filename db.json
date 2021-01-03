@@ -1,0 +1,19 @@
+{
+    "ads": [
+        {
+            "id": 1,
+            "title": "Christmas tree",
+            "description": "A beautiful Christmas tree"
+        },
+        {
+            "id": 2,
+            "title": "China Santa Claus",
+            "description": "A miniature Santa Claus made out of fine china"
+        },
+        {
+            "id": 3,
+            "title": "Harry Potter books",
+            "description": "All 7 Harry Potter books"
+        }
+    ]
+}

@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <AdsSearch @on-search="search"/>
+    <AdsList :filter="state.inputSearch"/>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+import { defineComponent, reactive } from 'vue'
+import AdsSearch from '@/components/AdsSearch.vue'
+import AdsList from '@/components/AdsList.vue' // @ is an alias to /src
 
 export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld
+    AdsSearch,
+    AdsList
+  },
+  setup () {
+    const state = reactive({
+      inputSearch: ''
+    })
+
+    function search (inputSearch: string) {
+      console.log(inputSearch)
+      state.inputSearch = inputSearch
+    }
+
+    return {
+      state,
+      search
+    }
   }
 })
 </script>
